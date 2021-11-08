@@ -9,7 +9,7 @@ import java.util.Objects;
 
 public class Symbol implements TextComponent{
 
-    private static Logger logger = LogManager.getLogger(Symbol.class);
+    private static final Logger logger = LogManager.getLogger(Symbol.class);
     private TextElementType elementType;
     private char symbol;
 
@@ -45,9 +45,8 @@ public class Symbol implements TextComponent{
         throw new UnsupportedOperationException("Unsupported getChildren operation with symbol");
     }
 
-    @Override
     public String transformText() {
-        return Character.toString(symbol);
+        return String.valueOf(symbol);
     }
 
     @Override
@@ -68,9 +67,11 @@ public class Symbol implements TextComponent{
 
     @Override
     public String toString() {
-        return "Symbol{" +
-                "component=" + elementType +
-                ", symbol=" + symbol +
-                '}';
+        StringBuilder str = new StringBuilder();
+        str.append("Symbol{");
+        str.append("elementType=").append(elementType);
+        str.append(",symbol= ").append(symbol);
+        str.append('}');
+        return str.toString();
     }
 }

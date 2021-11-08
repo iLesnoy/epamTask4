@@ -7,13 +7,15 @@ import epam.task.composite.parser.TextParser;
 
 public class ExpressionParser implements TextParser {
 
-    private static final TextParser leterParser = new LetterParser();
+    private static final TextParser letterParser = new LetterParser();
 
     @Override
     public TextComposite parse(String text) {
+
         TextComposite expressionComposite = new TextComposite(TextElementType.EXPRESSION);
-        TextComponent expressionComponent = leterParser.parse(text);
+        TextComponent expressionComponent = letterParser.parse(text);
         expressionComposite.add(expressionComponent);
+
         return expressionComposite;
     }
 }

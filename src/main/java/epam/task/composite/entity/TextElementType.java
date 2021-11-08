@@ -3,14 +3,16 @@ package epam.task.composite.entity;
 public enum TextElementType {
     PARAGRAPH("\n\t"),
     SENTENCE(""),
-    LEXEME(" "),
+    LEXEME("\s"),
     WORD(""),
     LETTER(""),
     SYMBOL(""),
-    EXPRESSION("");
+    EXPRESSION(""),
+    PUNCTUATION("");
 
-    private String delimiter;
     private String type;
+
+    private String splitter;
 
     TextElementType(String type) {
         this.type = type;
@@ -24,7 +26,11 @@ public enum TextElementType {
         this.type = type;
     }
 
-    public String getDelimiter() {
-        return delimiter;
+    public String getSplitter() {
+        return splitter;
+    }
+
+    public void setSplitter(String splitter) {
+        this.splitter = splitter;
     }
 }

@@ -4,17 +4,14 @@ import epam.task.composite.entity.TextComposite;
 import epam.task.composite.exception.CustomException;
 import epam.task.composite.reader.TextReader;
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class LetterParserTest {
+class PunctuationParserTest {
 
     private String actualText;
     private TextComposite textComposite;
-
 
     @BeforeEach
     void ServiceFilereading() throws CustomException {
@@ -22,12 +19,11 @@ class LetterParserTest {
         actualText = TextReader.readText(filepath);
     }
 
-
     @Test
-    @DisplayName("LetterParser")
-    void letterParse() {
-        LetterParser letterParser = new LetterParser();
-        textComposite = letterParser.parse(actualText);
-        assertEquals(textComposite.getChildren().size(),550);
+    void parse() {
+        PunctuationParser punctuationParser = new PunctuationParser();
+        textComposite = punctuationParser.parse(actualText);
+        assertEquals(28,textComposite.getChildren().size());
+
     }
 }

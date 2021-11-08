@@ -33,16 +33,16 @@ public class TextComposite implements TextComponent {
 
     @Override
     public List<TextComponent> getChildren() {
-        return List.copyOf(textComponents);
+        return textComponents.stream().toList();
     }
 
     @Override
     public String transformText() {
-        StringBuilder sb = new StringBuilder();
-        String delimiter = elementType.getDelimiter();
+        StringBuilder string = new StringBuilder();
+        String split = elementType.getSplitter();
         for (TextComponent textComponent : textComponents) {
-            sb.append(textComponent.toString()).append(delimiter);
+            string.append(textComponent).append(split);
         }
-        return sb.toString();
+        return string.toString();
     }
 }

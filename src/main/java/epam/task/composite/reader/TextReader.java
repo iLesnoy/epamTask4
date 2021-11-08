@@ -1,6 +1,6 @@
 package epam.task.composite.reader;
 
-import epam.task.composite.exception.CustomExeption;
+import epam.task.composite.exception.CustomException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -14,7 +14,7 @@ public class TextReader {
 
     private static final Logger logger = LogManager.getLogger();
 
-    public static String readText(String filepath) throws CustomExeption {
+    public static String readText(String filepath) throws  CustomException {
         Path path = Paths.get(filepath);
         try {
 
@@ -22,10 +22,10 @@ public class TextReader {
 
         } catch (FileNotFoundException e) {
             logger.error(e.getMessage());
-            throw new CustomExeption("File not found " + filepath,e);
+            throw new CustomException("File not found " + filepath,e);
         } catch (IOException e) {
             logger.error(e.getMessage());
-            throw new CustomExeption(e.getMessage());
+            throw new CustomException(e.getMessage());
         }
     }
 }

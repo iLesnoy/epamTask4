@@ -1,2 +1,8 @@
-[ERROR] 2021-11-05 19:53:42.638 [main] Main - first
-[ERROR] 2021-11-05 19:54:29.052 [main] Symbol - Unsupported add operation with symbol
+[ERROR] 2021-11-07 15:00:36.109 [main] Symbol - Unsupported getElementType operation with symbol
+[ERROR] 2021-11-07 15:04:28.159 [main] Symbol - Unsupported getElementType operation with symbol
+[ERROR] 2021-11-07 15:14:35.670 [main] TextReader - resources\Tet.txt
+[ERROR] 2021-11-07 15:39:17.263 [Symbol] Symbol - Unsupported add operation with symbol
+[ERROR] 2021-11-07 15:40:52.732 [Symbol] Symbol - Unsupported add operation with symbol
+[ERROR] 2021-11-07 16:18:16.086 [main] Symbol - Unsupported add operation with symbol
+[ERROR] 2021-11-07 19:31:07.889 [main] Symbol - Unsupported getChildren operation with symbol
+[ERROR] 2021-11-07 19:32:16.925 [main] Symbol - Unsupported getChildren operation with symbol
