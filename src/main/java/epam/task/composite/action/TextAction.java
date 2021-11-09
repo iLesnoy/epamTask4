@@ -8,12 +8,13 @@ public interface TextAction {
 
     List<TextComponent>paragraphSort(TextComponent textComposite);
 
+    int longestWord(TextComponent component);
     List<TextComponent>longestWordSentence(TextComponent textComposite);
 
     List<TextComponent>deleteSentences(TextComponent textComposite,int number);
-    Integer sameWordsCount(TextComponent component);
-    long vowelsCount(TextComponent textComponent);
-    long consonantsCount(TextComponent textComponent);
+    int sameWordsCount(TextComponent component);
+    long vowelsCount(TextComponent component);
+    long consonantsCount(TextComponent component);
 
 
 }

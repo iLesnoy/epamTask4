@@ -18,7 +18,7 @@ public class ParagraphParser implements TextParser {
 
         for (String paragraph : paragraphs) {
             TextComponent paragraphComponent = sentenceParser.parse(paragraph);
-            paragraphComposite.add(paragraphComponent);
+            paragraphComposite.addElement(paragraphComponent);
         }
 
         return paragraphComposite;

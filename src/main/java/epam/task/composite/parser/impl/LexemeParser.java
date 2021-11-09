@@ -27,18 +27,15 @@ public class LexemeParser implements TextParser {
             String lexeme = lexemes.group();
             if (lexeme.matches(WORD_REGEX)) {
                 TextComponent word = wordParser.parse(lexeme);
-                lexemeComposite.add(word);
+                lexemeComposite.addElement(word);
             } else {
                 String almostWord = lexeme.substring(0, lexeme.length() - 1);
                 if (lexeme.matches(WORD_REGEX)) {
 
                     TextComponent wordComponent = wordParser.parse(almostWord);
-                    lexemeComposite.add(wordComponent);
-                    lexemeComposite.add(new Symbol(TextElementType.LEXEME, lexeme.charAt(almostWord.length())));
+                    lexemeComposite.addElement(wordComponent);
+                    lexemeComposite.addElement(new Symbol(TextElementType.LEXEME, lexeme.charAt(almostWord.length())));
 
-                } else {
-                    TextComponent textComponent = expParser.parse(lexeme);
-                    lexemeComposite.add(textComponent);
                 }
 
             }

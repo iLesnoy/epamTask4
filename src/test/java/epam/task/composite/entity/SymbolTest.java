@@ -15,7 +15,7 @@ class SymbolTest {
         char a = 10;
         letterComponent = new Symbol(TextElementType.LETTER,a);
         int sizeBeforeAdd = letterComposite.getChildren().size();
-        letterComponent.add(letterComponent);
+        letterComponent.addElement(letterComponent);
         assertNotEquals(letterComponent.getChildren().size(),sizeBeforeAdd);
     }
 

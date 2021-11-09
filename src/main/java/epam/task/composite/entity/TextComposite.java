@@ -17,12 +17,12 @@ public class TextComposite implements TextComponent {
     }
 
     @Override
-    public void add(TextComponent textComponent) {
+    public void addElement(TextComponent textComponent) {
         textComponents.add(textComponent);
     }
 
     @Override
-    public void remove(TextComponent textComponent) {
+    public void removeElement(TextComponent textComponent) {
       textComponents.remove(textComponent);
     }
 
@@ -39,9 +39,8 @@ public class TextComposite implements TextComponent {
     @Override
     public String transformText() {
         StringBuilder string = new StringBuilder();
-        String split = elementType.getSplitter();
         for (TextComponent textComponent : textComponents) {
-            string.append(textComponent).append(split);
+            string.append(textComponent).append(elementType.getSplitter());
         }
         return string.toString();
     }

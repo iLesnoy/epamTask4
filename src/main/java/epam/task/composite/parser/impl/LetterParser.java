@@ -19,7 +19,7 @@ public class LetterParser implements TextParser {
 
         for (String symbol : symbols) {
             letterComponent = new Symbol(TextElementType.LETTER, symbol.charAt(0));
-            letterComposite.add(letterComponent);
+            letterComposite.addElement(letterComponent);
         }
 
         return letterComposite;

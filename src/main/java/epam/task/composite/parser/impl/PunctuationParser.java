@@ -25,7 +25,7 @@ public class PunctuationParser implements TextParser {
             String word = matcher.group();
             TextComponent punctComponent = new Symbol(TextElementType.PUNCTUATION, word.charAt(0));
             System.out.println(punctComponent);
-            punctuationComposite.add(punctComponent);
+            punctuationComposite.addElement(punctComponent);
         }
         return punctuationComposite;
     }

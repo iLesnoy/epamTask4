@@ -14,7 +14,7 @@ public class ExpressionParser implements TextParser {
 
         TextComposite expressionComposite = new TextComposite(TextElementType.EXPRESSION);
         TextComponent expressionComponent = letterParser.parse(text);
-        expressionComposite.add(expressionComponent);
+        expressionComposite.addElement(expressionComponent);
 
         return expressionComposite;
     }

@@ -14,7 +14,7 @@ public class WordParser implements TextParser {
 
         TextComposite wordComposite = new TextComposite(TextElementType.WORD);
         TextComponent textComponent = letter.parse(text);
-        wordComposite.add(textComponent);
+        wordComposite.addElement(textComponent);
 
         return wordComposite;
     }

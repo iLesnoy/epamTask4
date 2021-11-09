@@ -17,14 +17,14 @@ class TextCompositeTest {
     void add(){
         letterComponent = new TextComposite(TextElementType.LETTER);
         int sizeBeforeAdd = letterComposite.getChildren().size();
-        letterComponent.add(letterComponent);
+        letterComponent.addElement(letterComponent);
         assertNotEquals(letterComponent.getChildren().size(),sizeBeforeAdd);
     }
 
 
     @Test
     void remove() {
-        letterComponent.remove(letterComponent);
+        letterComponent.removeElement(letterComponent);
         assertTrue(letterComponent.getChildren().isEmpty());
     }
 

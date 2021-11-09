@@ -30,7 +30,7 @@ class TextActionImplTest {
     @Test
     void paragraphSort() {
         List<TextComponent> expectedSort = textAction.paragraphSort(textComposite);
-        int actual = expectedSort.get(3).getChildren().size();
+        int actual = expectedSort.get(0).getChildren().size();
         assertEquals(actual,2);
     }
 

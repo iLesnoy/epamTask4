@@ -22,13 +22,13 @@ public class Symbol implements TextComponent{
     }
 
     @Override
-    public void add(TextComponent textComponent) {
+    public void addElement(TextComponent textComponent) {
         logger.error("Unsupported add operation with symbol");
         throw new UnsupportedOperationException("Unsupported add operation with symbol");
     }
 
     @Override
-    public void remove(TextComponent textComponent) {
+    public void removeElement(TextComponent textComponent) {
         logger.error("Unsupported remove operation with symbol");
         throw new UnsupportedOperationException("Unsupported remove operation with symbol");
     }
