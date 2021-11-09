@@ -1,6 +1,6 @@
 package epam.task.composite.parser.impl;
 
-import epam.task.composite.entity.Symbol;
+import epam.task.composite.entity.Element;
 import epam.task.composite.entity.TextComponent;
 import epam.task.composite.entity.TextComposite;
 import epam.task.composite.entity.TextElementType;
@@ -34,7 +34,7 @@ public class LexemeParser implements TextParser {
 
                     TextComponent wordComponent = wordParser.parse(almostWord);
                     lexemeComposite.addElement(wordComponent);
-                    lexemeComposite.addElement(new Symbol(TextElementType.LEXEME, lexeme.charAt(almostWord.length())));
+                    lexemeComposite.addElement(new Element(TextElementType.LEXEME, lexeme.charAt(almostWord.length())));
 
                 }
 

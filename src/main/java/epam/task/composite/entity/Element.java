@@ -7,16 +7,16 @@ import java.util.List;
 import java.util.Objects;
 
 
-public class Symbol implements TextComponent{
+public class Element implements TextComponent{
 
-    private static final Logger logger = LogManager.getLogger(Symbol.class);
+    private static final Logger logger = LogManager.getLogger(Element.class);
     private TextElementType elementType;
     private char symbol;
 
-    public Symbol() {
+    public Element() {
     }
 
-    public Symbol(TextElementType elementType, char symbol) {
+    public Element(TextElementType elementType, char symbol) {
         this.elementType = elementType;
         this.symbol = symbol;
     }
@@ -53,7 +53,7 @@ public class Symbol implements TextComponent{
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Symbol symbol1 = (Symbol) o;
+        Element symbol1 = (Element) o;
         return symbol == symbol1.symbol && Objects.equals(elementType, symbol1.elementType);
     }
 
