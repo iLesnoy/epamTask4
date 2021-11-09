@@ -34,7 +34,7 @@ public class LexemeParser implements TextParser {
 
                     TextComponent wordComponent = wordParser.parse(almostWord);
                     lexemeComposite.addElement(wordComponent);
-                    lexemeComposite.addElement(new Symbol(TextElementType.LEXEME, lexeme.charAt(almostWord.length())));
+                    lexemeComposite.addElement(TextElementType.LEXEME, lexeme.charAt(almostWord.length()));
 
                 }
 
