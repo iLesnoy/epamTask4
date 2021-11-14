@@ -22,7 +22,7 @@ public class SentenceParser implements TextParser {
         Matcher matcher = sentence.matcher(text);
 
         while (matcher.find()) {
-            TextComponent sentenceComponent = lexemeParser.parse(matcher.group());
+            TextComponent sentenceComponent = lexemeParser.parse(matcher.group(0));
             sentenceComposite.addElement(sentenceComponent);
         }
 

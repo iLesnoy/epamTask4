@@ -12,5 +12,6 @@ public interface TextComponent {
 
     List<TextComponent>getChildren();
 
-    String transformText();
+    String toString();
+
 }

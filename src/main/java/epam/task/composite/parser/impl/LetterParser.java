@@ -1,6 +1,6 @@
 package epam.task.composite.parser.impl;
 
-import epam.task.composite.entity.Element;
+import epam.task.composite.entity.Symbol;
 import epam.task.composite.entity.TextComponent;
 import epam.task.composite.entity.TextComposite;
 import epam.task.composite.entity.TextElementType;
@@ -18,7 +18,7 @@ public class LetterParser implements TextParser {
         String[] symbols = text.split(LETTER_REGEX);
 
         for (String symbol : symbols) {
-            letterComponent = new Element(TextElementType.LETTER, symbol.charAt(0));
+            letterComponent = new Symbol(TextElementType.LETTER, symbol.charAt(0));
             letterComposite.addElement(letterComponent);
         }
 

@@ -1,6 +1,6 @@
 package epam.task.composite.parser.impl;
 
-import epam.task.composite.entity.Element;
+import epam.task.composite.entity.Symbol;
 import epam.task.composite.entity.TextComponent;
 import epam.task.composite.entity.TextComposite;
 import epam.task.composite.entity.TextElementType;
@@ -23,7 +23,7 @@ public class PunctuationParser implements TextParser {
         while (matcher.find()) {
 
             String word = matcher.group();
-            TextComponent punctComponent = new Element(TextElementType.PUNCTUATION, word.charAt(0));
+            TextComponent punctComponent = new Symbol(TextElementType.PUNCTUATION, word.charAt(0));
             System.out.println(punctComponent);
             punctuationComposite.addElement(punctComponent);
         }

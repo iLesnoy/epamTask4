@@ -10,27 +10,15 @@ public enum TextElementType {
     EXPRESSION(""),
     PUNCTUATION("");
 
-    private String elementType;
 
     private String splitter;
 
-    TextElementType(String type) {
-        this.elementType = type;
-    }
-
-    public String getElementType() {
-        return elementType;
-    }
-
-    public void setElementType(String elementType) {
-        this.elementType = elementType;
+    TextElementType(String splitter) {
+        this.splitter = splitter;
     }
 
     public String getSplitter() {
         return splitter;
     }
 
-    public void setSplitter(String splitter) {
-        this.splitter = splitter;
-    }
 }
