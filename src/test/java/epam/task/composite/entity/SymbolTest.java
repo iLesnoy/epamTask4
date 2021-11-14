@@ -13,7 +13,7 @@ class SymbolTest {
     @Test
     void add(){
         char a = 10;
-        letterComponent = new Element(TextElementType.LETTER,a);
+        letterComponent = new Symbol(TextElementType.LETTER,a);
         int sizeBeforeAdd = letterComposite.getChildren().size();
         letterComponent.addElement(letterComponent);
         assertNotEquals(letterComponent.getChildren().size(),sizeBeforeAdd);

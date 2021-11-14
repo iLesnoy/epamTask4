@@ -7,16 +7,16 @@ import java.util.List;
 import java.util.Objects;
 
 
-public class Element implements TextComponent{
+public class Symbol implements TextComponent{
 
-    private static final Logger logger = LogManager.getLogger(Element.class);
+    private static final Logger logger = LogManager.getLogger(Symbol.class);
     private TextElementType elementType;
     private char symbol;
 
-    public Element() {
+    public Symbol() {
     }
 
-    public Element(TextElementType elementType, char symbol) {
+    public Symbol(TextElementType elementType, char symbol) {
         this.elementType = elementType;
         this.symbol = symbol;
     }
@@ -45,15 +45,13 @@ public class Element implements TextComponent{
         throw new UnsupportedOperationException("Unsupported getChildren operation with symbol");
     }
 
-    public String transformText() {
-        return String.valueOf(symbol);
-    }
+
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Element symbol1 = (Element) o;
+        Symbol symbol1 = (Symbol) o;
         return symbol == symbol1.symbol && Objects.equals(elementType, symbol1.elementType);
     }
 
@@ -67,11 +65,7 @@ public class Element implements TextComponent{
 
     @Override
     public String toString() {
-        StringBuilder str = new StringBuilder();
-        str.append("Symbol{");
-        str.append("elementType=").append(elementType);
-        str.append(",symbol= ").append(symbol);
-        str.append('}');
-        return str.toString();
+        return String.valueOf(symbol);
     }
+
 }

@@ -27,6 +27,7 @@ class LexemeParserTest {
     void lexemeParse() {
         LexemeParser lexemeParser = new LexemeParser();
         textComposite = lexemeParser.parse(actualText);
+        System.out.println(textComposite.getChildren().get(0).getChildren().get(0).getChildren().size());
         assertEquals(91,textComposite.getChildren().size());
 
     }

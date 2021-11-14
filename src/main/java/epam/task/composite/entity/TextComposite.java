@@ -37,7 +37,7 @@ public class TextComposite implements TextComponent {
     }
 
     @Override
-    public String transformText() {
+    public String toString() {
         StringBuilder string = new StringBuilder();
         for (TextComponent textComponent : textComponents) {
             string.append(textComponent).append(elementType.getSplitter());

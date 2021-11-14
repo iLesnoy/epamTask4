@@ -10,6 +10,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
+import java.util.Map;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -31,12 +32,12 @@ class TextActionImplTest {
     void paragraphSort() {
         List<TextComponent> expectedSort = textAction.paragraphSort(textComposite);
         int actual = expectedSort.get(0).getChildren().size();
-        assertEquals(actual,2);
+        assertEquals(actual,1);
     }
 
     @Test
     void longestWordSentence() {
-        int expectedSentence = 6;
+        int expectedSentence = 1;
         List<TextComponent> list = textAction.longestWordSentence(textComposite);
         int actualSentence = list.size();
         assertEquals(expectedSentence,actualSentence);
@@ -51,18 +52,18 @@ class TextActionImplTest {
 
     @Test
     void sameWordsCount() {
-        int sameWordsCount = textAction.sameWordsCount(textComposite);
-        assertEquals(4, sameWordsCount);
+        long sameWordsCount= textAction.sameWordsCount(textComposite);
+        assertEquals(18, sameWordsCount);
     }
 
     @Test
-    void vowelsWords(TextComponent component) {
-        assertEquals(textAction.vowelsCount(component),40);
+    void vowelsWords() {
+        assertEquals(36,textAction.vowelsCount(textComposite));
     }
 
     @Test
-    void consonantsWords(TextComponent component) {
-        assertEquals(textAction.consonantsCount(component),40);
+    void consonantsWords() {
+        assertEquals(31,textAction.consonantsCount(textComposite),7);
     }
 
 }
